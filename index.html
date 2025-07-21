@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luna!</title>
+    <script type="module" src="/src/main.ts" defer></script>
+
+    <style>
+      .search-bar {
+        transition: all 1.0s ease;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+      }
+
+      .search-bar.visible, .search-bar:hover {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="search-bar" style="width: 100%; display: flex; gap: 10px; margin-top: 1.5%;">
+      <button style="white-space: nowrap;">Back</button>
+      <button style="white-space: nowrap;">Forward</button>
+      <input style="flex-grow: 1;" placeholder="facebook.com"/>
+      <button type="submit" style="white-space: nowrap;">Launch</button>
+    </section>
+
+
+    <main class="container">
+      <h1>Welcome to Tauri, Muda Foooooooooka</h1>
+
+      <div class="row">
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="/src/assets/vite.svg" class="logo vite" alt="Vite logo" />
+        </a>
+        <a href="https://tauri.app" target="_blank">
+          <img
+            src="/src/assets/tauri.svg"
+            class="logo tauri"
+            alt="Tauri logo"
+          />
+        </a>
+        <a href="https://www.typescriptlang.org/docs" target="_blank">
+          <img
+            src="/src/assets/typescript.svg"
+            class="logo typescript"
+            alt="typescript logo"
+          />
+        </a>
+      </div>
+      <p>Click on the Tauri logo to learn more about the framework</p>
+
+      <form class="row" id="greet-form">
+        <input id="greet-input" placeholder="Enter a name..." />
+        <button type="submit">Greet</button>
+      </form>
+      <p id="greet-msg"></p>
+    </main>
+  </body>
+</html>
